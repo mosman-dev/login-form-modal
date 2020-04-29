@@ -1,0 +1,228 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    user-select: none;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(45deg, #44a3fca1 50%, #44a3fc 50%);
+}
+
+/* Modal */
+
+.modal-btn {
+    display: flex;
+    justify-content: center;
+    align-items: Center;
+    width: 295px;
+    height: 40px;
+    background: #07273d;
+    color: #f1f1f1;
+    margin: 30px 0;
+    text-transform: uppercase;
+    font-size: 0.8em;
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.4s;
+    box-shadow: 0px 1px 4px #111;
+}
+.modal-btn:hover {
+    opacity: 0.8;
+    box-shadow: none; 
+}
+
+.modal-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.8);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    cursor: pointer;
+    font-size: 1.4em;
+    color: #000;
+    text-decoration: none;
+    z-index: 99;
+    transition: 0.5s;
+}
+
+.close:hover {
+    opacity: 0.7;
+    transform: scale(0.96);
+}
+
+/* Login Form UI */
+
+.container {
+    position: relative;
+    height: 400px;
+    width: 800px;
+    border-radius: 25px;
+    overflow: hidden;
+    background: #fff;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    transition: 0.5s;
+    transform: translate(0%, -50%);
+}
+
+.left {
+    position: absolute;
+    left: 0;
+    width: 400px;
+    height: 100%;
+}
+
+.left img {
+    width: 100%;
+    height: 100%;
+}
+
+.right {
+    position: absolute;
+    right: 0;
+    width: 400px;
+    text-align: center;
+}
+
+.right h2 {
+    margin: 30px 0;
+}
+
+.right h2::before, .right h2::after {
+    content: '';
+    position: absolute;
+    background: rgb(233, 232, 232);
+    width: 20%;
+    height: 1px;
+    top: 12%;
+}
+
+.right h2::before {
+    left: 14%;
+}
+
+.right h2::after {
+    right: 14%;
+}
+
+.right input {
+    margin: 15px 25px 0 0;
+    width: 250px;
+    height: 40px;
+    border-radius: 30px;
+    background: #eee;
+    border: 1px solid #eee;
+    padding-left: 45px;
+    letter-spacing: 0.5px;
+    transition: all 0.4s;
+}
+
+.right input:focus {
+    border: 1px solid #c50202;
+}
+
+.right input:valid {
+    border: 1px solid #03ac03;
+}
+
+.right .fas {
+    transform: translateX(35px);
+}
+
+.right button {
+    margin: 30px 0;
+    background: #1a99ee;
+    color: #f1f1f1;
+    letter-spacing: 0.5px;
+    width: 295px;
+    height: 40px;
+    font-size: 1em;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.4s;
+    box-shadow: 0px 1px 4px #111;
+}
+
+.right button:hover {
+    opacity: 0.8;
+    box-shadow: none;
+}
+
+.login-options {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.login-options i {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    color: #fff;
+    border-radius: 50px;
+    margin-right: 10px;
+}
+
+.login-options i:last-child {
+    margin: 0;
+}
+
+i {
+    background: transparent;
+}
+
+.fab {
+    box-shadow: 0px 1px 4px #111;
+    transition: 0.4s;
+}
+
+.fab:hover {
+    box-shadow: none;
+    opacity: 0.8;
+}
+
+.fa-facebook-f {
+    background: #0f6faa;
+}
+
+.fa-google {
+    background: rgb(218, 38, 92);
+}
+
+.fa-twitter {
+    background: #1d9ff0;
+}
+
+@media only screen and (max-width: 800px) {
+    .container {
+        width: 375px;
+    }
+    .left {
+        display: none;
+    }
+    .right {
+        width: 375px;
+    }
+}
+
